@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import factory.Driver;
-import pages.LoginPage;
+import pages.OfferPage;
 
 //========================================
 
@@ -30,11 +30,11 @@ import pages.LoginPage;
 
 //============================================
 
-public class LoginTest extends Driver{
+public class OfferTest extends Driver{
 // ========================================
 // INSTANTIATE PAGES TO BE TESTED
 // ============================================
-private LoginPage loginPage;    
+private OfferPage offerPage;    
 /**
  ** DataProvider: DataProvider is used to return specific data as per the
  * test method name This is used to specify the source where test data is
@@ -52,7 +52,7 @@ private LoginPage loginPage;
    @BeforeClass
    public void setup() {
 	   Driver.startdriver("firefox");
-	   driver.get("https://www.credify.tech/portal/login");		  
+	//   driver.get("https://www.credify.tech/portal/login");		  
     }
 
 // ==========================================================
@@ -60,12 +60,11 @@ private LoginPage loginPage;
 // ===========================================================              
 
 	@Test
-	public void testlogin() throws Exception {
-	   LoginPage loginObject = new LoginPage(driver);
-	   loginObject.setUserName("candidate+123@upgrade-challenge.com");
-	   loginObject.setPassword("Apa040882");
-	   loginObject.signIn();
-	   Thread.sleep(5000);
+	public void testlogOut() throws Exception {
+	   OfferPage offerObject = new OfferPage(driver);
+	   offerObject.saveDefaultLoanSelection();
+	   
+	   offerObject.clickLogOutLink();
 	 }
 	
 	 @AfterClass

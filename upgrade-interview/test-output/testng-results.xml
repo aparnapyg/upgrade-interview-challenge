@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14549" started-at="2019-08-14T01:25:14Z" finished-at="2019-08-14T01:25:29Z">
+  <suite name="Default suite" duration-ms="27497" started-at="2019-08-15T05:25:28Z" finished-at="2019-08-15T05:25:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14549" started-at="2019-08-14T01:25:14Z" finished-at="2019-08-14T01:25:29Z">
-      <class name="tests.LoginTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.LoginTest@548a9f61]" name="setup" is-config="true" duration-ms="8112" started-at="2019-08-14T01:25:14Z" finished-at="2019-08-14T01:25:22Z">
+    <test name="Default test" duration-ms="27497" started-at="2019-08-15T05:25:28Z" finished-at="2019-08-15T05:25:56Z">
+      <class name="tests.NonDMFunnelTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.NonDMFunnelTest@1753acfe]" name="setup" is-config="true" duration-ms="14929" started-at="2019-08-15T05:25:28Z" finished-at="2019-08-15T05:25:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testlogin()[pri:0, instance:tests.LoginTest@548a9f61]" name="testlogin" duration-ms="5661" started-at="2019-08-14T01:25:23Z" finished-at="2019-08-14T01:25:28Z">
+        <test-method status="PASS" signature="testEnterLoanCriteria()[pri:0, instance:tests.NonDMFunnelTest@1753acfe]" name="testEnterLoanCriteria" duration-ms="11774" started-at="2019-08-15T05:25:43Z" finished-at="2019-08-15T05:25:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testlogin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.LoginTest@548a9f61]" name="teardown" is-config="true" duration-ms="737" started-at="2019-08-14T01:25:28Z" finished-at="2019-08-14T01:25:29Z">
+        </test-method> <!-- testEnterLoanCriteria -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.NonDMFunnelTest@1753acfe]" name="teardown" is-config="true" duration-ms="757" started-at="2019-08-15T05:25:55Z" finished-at="2019-08-15T05:25:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.NonDMFunnelTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

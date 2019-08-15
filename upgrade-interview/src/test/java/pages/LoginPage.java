@@ -11,8 +11,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 	
-	public WebDriver driver;
-	
 	@FindBy(css="[name='username']")
 	WebElement userEmail;
 	
@@ -23,7 +21,6 @@ public class LoginPage {
 	WebElement signInToYourAccount;
 	
 	public LoginPage(WebDriver driver) {
-		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
