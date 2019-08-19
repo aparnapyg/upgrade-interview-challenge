@@ -18,13 +18,13 @@ import factory.Driver;
 public class OfferPage {
 	
 	@FindBy(css="[data-auto='getDefaultLoan']")
-	WebElement defaultLoanSelection;
+	public WebElement defaultLoanSelection;
 	
 	@FindBy(css="[class='header-nav__toggle']")
-	WebElement menuDropDown;
+	public WebElement menuDropDown;
 	
 	@FindBy(css="a[href$='/logout']")
-	WebElement logOutLink;
+	public WebElement logOutLink;
 	
 	
 	public OfferPage(WebDriver driver) {
@@ -37,11 +37,9 @@ public class OfferPage {
 		defaultLoanSelection.submit();
 	}
 
+	
 	public void clickLogOutLink() throws Exception {
 		menuDropDown.click();
-		Thread.sleep(5000);
-		
 		logOutLink.click();
-		Thread.sleep(5000);
 	}
 }

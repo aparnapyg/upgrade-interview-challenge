@@ -2,10 +2,13 @@ package tests;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -77,7 +80,9 @@ private LoginPage loginPage;
            // TODO Auto-generated catch block
            e.printStackTrace();
        }
-      
+       WebDriverWait wait = new WebDriverWait(driver,40);
+       wait.until(ExpectedConditions.urlContains("offer-page"));
+       wait.until(ExpectedConditions.elementToBeClickable(offerObject.defaultLoanSelection));
 	   offerObject.clickLogOutLink();
 	 }
 	
