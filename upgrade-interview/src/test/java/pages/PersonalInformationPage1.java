@@ -52,6 +52,7 @@ public class PersonalInformationPage1 {
 	WebElement password;
 	
 	@FindBy(css="[class='sc-kfGgVZ sc-esjQYD fCisXT']")
+//	@FindBy(css="[type='checkbox']")
 	WebElement termsAndAgreementCheckBox;
 	
 	@FindBy(css="[type='submit']")
@@ -61,7 +62,7 @@ public class PersonalInformationPage1 {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void enterIndividualInformation() {
+	public void enterIndividualInformation() throws Exception {
 		firstName.sendKeys("Random");
 		lastName.sendKeys("Random");
 		streetAddress.sendKeys("Apt# 203 Ballston Common");
@@ -73,6 +74,8 @@ public class PersonalInformationPage1 {
 		additionalIncome.sendKeys("5,000");
 		emailAddress.sendKeys("candidate+1233@upgrade-challenge.com");
 		password.sendKeys("1234$#A!");
+		termsAndAgreementCheckBox.click();
+		checkYourRateButton.submit();
 	}
 
 }

@@ -8,6 +8,8 @@ import java.util.Map;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.IHookCallBack;
 import org.testng.IHookable;
@@ -22,24 +24,19 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import factory.Driver;
-import pages.OfferPage;
+import pages.PersonalInformationPage1;
 
 //========================================
 
 // Page classes Imported for this Test Class
 
 //============================================
-/**
- * Offer-page test class 
- * @author Aparna
- *
- */
 
-public class OfferTest extends Driver{
+public class PersonalInformationPage1Test extends Driver{
 // ========================================
 // INSTANTIATE PAGES TO BE TESTED
 // ============================================
-private OfferPage offerPage;    
+private PersonalInformationPage1 personalIormationPage1;    
 /**
  ** DataProvider: DataProvider is used to return specific data as per the
  * test method name This is used to specify the source where test data is
@@ -55,9 +52,11 @@ private OfferPage offerPage;
    * Run when the test method runs
    */
    @BeforeClass
-   public void setup() {
+   public void verifyNonDMFunnelTest() {
 	   Driver.startdriver("firefox");
-	//   driver.get("https://www.credify.tech/portal/login");		  
+////	   driver.get("https://www.credify.tech/portal/login");		
+	   WebDriverWait wait = new WebDriverWait(driver, 20);
+	   wait.until(ExpectedConditions.urlContains("https://www.credify.tech/phone/personal-information-1"));
     }
 
 // ==========================================================
@@ -65,11 +64,10 @@ private OfferPage offerPage;
 // ===========================================================              
 
 	@Test
-	public void testlogOut() throws Exception {
-	   OfferPage offerObject = new OfferPage(driver);
-	   offerObject.saveDefaultLoanSelection();
-	   
-	   offerObject.clickLogOutLink();
+	public void testCompleteUserInformation() throws Exception {
+	   PersonalInformationPage1 personalInfoPageObject = new PersonalInformationPage1(driver);
+	   personalInfoPageObject.enterIndividualInformation();
+	   Thread.sleep(5000);
 	 }
 	
 	 @AfterClass
